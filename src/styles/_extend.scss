@@ -1,0 +1,14 @@
+@import 'mixin';
+
+%horizontal-center {
+  @include psa;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+%center {
+  @extend %horizontal-center;
+  top: 0;
+  bottom: 0;
+}

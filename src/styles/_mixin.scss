@@ -1,0 +1,104 @@
+@mixin psa {
+  position: absolute;
+}
+
+@mixin psr {
+  position: relative;
+}
+
+@mixin psf {
+  position: fixed;
+}
+
+@mixin dpb {
+  display: block;
+}
+
+@mixin dpi {
+  display: inline;
+}
+
+@mixin dpib {
+  display: inline-block;
+}
+
+@mixin dpt {
+  display: table;
+}
+
+@mixin dptc {
+  display: table-cell;
+}
+
+@mixin dpf {
+  display: flex;
+}
+
+@mixin set-width-height($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin background($url) {
+  background: url($url) no-repeat;
+  background-size: 100% auto;
+}
+
+
+@mixin button {
+  padding: .1rem;
+  font-size: 0.18rem;
+  width: 100%;
+  color: white;
+  background: $base-color;
+  border-radius: .03rem;
+}
+
+@mixin set-width-height($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin background($url) {
+  background: url($url) no-repeat;
+  background-size: 100% 100%;
+}
+
+@mixin triangel($direction: right, $size: .05rem, $color: #666) {
+  display: block;
+  width: 0;
+  height: 0;
+  @if $direction == right {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+  } @else if $direction == left {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+  } @else if $direction == bottom {
+    border-right: $size solid transparent;
+    border-left: $size solid transparent;
+    border-top: $size solid $color;
+  }
+}
+
+@mixin button($url) {
+  @include set-width-height(2.1rem, .4rem);
+  @include background($url);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin cover {
+  @include set-width-height(100%, 100%);
+}
+
+@mixin mask {
+  @include psf;
+  @include cover;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, .4);
+}
