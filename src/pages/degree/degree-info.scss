@@ -1,0 +1,25 @@
+.degree-info {
+  text-align:left;
+  margin-bottom: 30px;
+  .title{
+    line-height: 50px;
+  }
+  .btns{
+    padding-top: 20px;
+  }
+  .add{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  table {
+    width: 100%;
+    text-align: center;
+    td{
+      padding: 10px 0;
+    }
+    .el-form-item{
+      margin: 0;
+    }
+  }
+
+}

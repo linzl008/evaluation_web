@@ -169,7 +169,7 @@
   }
 </script>
 
-<style rel="stylesheet/scss" scoped>
+<style rel="stylesheet/scss" lang="scss" scoped>
   .popular {
     text-align: left;
   }

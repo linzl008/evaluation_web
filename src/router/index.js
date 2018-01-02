@@ -9,15 +9,22 @@ export default new Router({
     {
       path: '/',
       name: 'app.log',
-      component: Log
+      component: Log,
+        redirect: '/home/degree/home',
     }, {
       path: '/home',
       name: 'app.home',
       component: (resolve) => {
         require(['@/pages/home'], resolve)
       },
-      redirect: '/home/board/banner',
+      redirect: '/home/degree/home',
       children: [
+
+          { path:'degree/home', name:'app.home.degree.home',component: (resolve) => {require(['@/pages/degree/home'], resolve)}},
+          { path:'degree/apply', name:'app.home.degree.apply',component: (resolve) => {require(['@/pages/degree/apply'], resolve)}},
+          { path:'degree/degree-info', name:'app.home.degree.degree-info',component: (resolve) => {require(['@/pages/degree/degree-info'], resolve)}},
+
+
           { path:'board/banner', name:'app.home.board.banner',component: (resolve) => {require(['@/pages/board/banner'], resolve)}},
           { path:'board/marquee', name:'app.home.board.marquee',component: (resolve) => {require(['@/pages/board/marquee'], resolve)}},
           { path:'board/news', name:'app.home.board.news',component: (resolve) => {require(['@/pages/board/news'], resolve)}},
@@ -29,13 +36,6 @@ export default new Router({
           { path:'main/hot', name:'app.home.main.hot',component: (resolve) => {require(['@/pages/main/hot'], resolve)}},
           { path:'main/search', name:'app.home.main.search',component: (resolve) => {require(['@/pages/main/search'], resolve)}},
 
-          { path:'tab/quantity', name:'app.home.tab.quantity',component: (resolve) => {require(['@/pages/tab/quantity'], resolve)}},
-          { path:'tab/index', name:'app.home.tab.index',component: (resolve) => {require(['@/pages/tab/index'], resolve)}},
-          { path:'tab/plan', name:'app.home.tab.plan',component: (resolve) => {require(['@/pages/tab/plan'], resolve)}},
-          { path:'tab/base', name:'app.home.tab.base',component: (resolve) => {require(['@/pages/tab/base'], resolve)}},
-          { path:'tab/popular', name:'app.home.tab.popular',component: (resolve) => {require(['@/pages/tab/popular'], resolve)}},
-          { path:'tab/hot', name:'app.home.tab.hot',component: (resolve) => {require(['@/pages/tab/hot'], resolve)}},
-          { path:'tab/manager', name:'app.home.tab.manager',component: (resolve) => {require(['@/pages/tab/manager'], resolve)}},
 
           { path:'sys/version', name:'app.home.sys.version',component: (resolve) => {require(['@/pages/sys/version'], resolve)}},
           { path:'sys/user', name:'app.home.sys.user',component: (resolve) => {require(['@/pages/sys/user'], resolve)}},

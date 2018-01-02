@@ -49,9 +49,9 @@
   .v-modal {
     z-index: 1000 !important;
   }
-  .view .el-tabs.el-tabs--top{
-    padding-bottom: 50px;
-  }
+  /*.view .el-tabs.el-tabs--top{*/
+    /*padding-bottom: 50px;*/
+  /*}*/
   .el-form-item {
     margin-bottom: 15px;
   }

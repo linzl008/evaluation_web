@@ -4,8 +4,14 @@
 import * as types from '../mutation-types'
 
 const state = {
+
   'menus': [
-    { 'menu_name': '公告资讯', 'menu_url': '', 'menu_icon': 'icon-gonggao',
+    { 'menu_name': '学位申请', 'menu_url': '', 'menu_icon': 'icon-gonggao',
+      'items': [
+        {'menu_name': '信息录入', 'menu_url': 'app.home.degree.home'},
+      ]
+    },
+    /*{ 'menu_name': '公告资讯', 'menu_url': '', 'menu_icon': 'icon-gonggao',
       'items': [
         {'menu_name': 'banner与介绍', 'menu_url': 'app.home.board.banner'},
         {'menu_name': '跑马灯', 'menu_url': 'app.home.board.marquee'},
@@ -20,17 +26,6 @@ const state = {
         {'menu_name': '人气之选', 'menu_url': 'app.home.main.popular'},
         {'menu_name': '热门关注', 'menu_url': 'app.home.main.hot'},
         {'menu_name': '热门搜索配置', 'menu_url': 'app.home.main.search'},
-      ]
-    },
-    { 'menu_name': '标签页内容基金', 'menu_url': '', 'menu_icon': 'icon-caidan',
-      'items': [
-        {'menu_name': '优选量化', 'menu_url': 'app.home.tab.quantity'},
-        {'menu_name': '优选指数', 'menu_url': 'app.home.tab.index'},
-        {'menu_name': '优选定投', 'menu_url': 'app.home.tab.plan'},
-        {'menu_name': '优选货基', 'menu_url': 'app.home.tab.base'},
-        {'menu_name': '人气之选', 'menu_url': 'app.home.tab.popular'},
-        {'menu_name': '热门关注', 'menu_url': 'app.home.tab.hot'},
-        {'menu_name': '基金经理', 'menu_url': 'app.home.tab.manager'},
       ]
     },
     { 'menu_name': '全部基金', 'menu_url': '', 'menu_icon': 'icon-jijin',
@@ -53,7 +48,7 @@ const state = {
         {'menu_name': '版本管理', 'menu_url': 'app.home.sys.version'},
         {'menu_name': '用户管理', 'menu_url': 'app.home.sys.user'},
       ]
-    },
+    },*/
 
   ]
 }

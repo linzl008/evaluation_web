@@ -6,7 +6,7 @@
       <el-form ref="form" :model="form" label-width="0" :rules="rules" :show-message="false" class="login-form">
         <div class="logo">
           <!--<img style="background-color: #2d2f33"  src="../../src/assets/logo.png" alt="login-logo">-->
-          <h1>华泰基金中台</h1>
+          <h1>学术评估系统</h1>
         </div>
         <div class="user">
           <el-form-item prop="userno">
